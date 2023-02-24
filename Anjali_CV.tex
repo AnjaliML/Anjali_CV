@@ -1,0 +1,189 @@
+\documentclass[11pt,a4paper,roman,english,colorlinks,linkcolor=true]{moderncv}
+\moderncvstyle{classic}%'casual', 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}%'blue', 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75,a4paper]{geometry}
+\usepackage{babel}
+\usepackage{xcolor}
+\usepackage[url=false,
+backend=bibtex,
+style=numeric,
+doi=true,
+isbn=true,
+backref=false,
+maxnames=99,
+defernumbers=true,
+natbib=true,
+sorting=ydnt]{biblatex}
+\usepackage{refcount}
+\DeclareNameAlias{author}{last-first}
+\defbibenvironment{bibliography}
+{\list
+	{\printtext[labelnumberwidth]{%
+			\printfield{labelprefix}%
+			\printfield{labelnumber}}}
+	{\setlength{\labelwidth}{\labelnumberwidth}%
+		\setlength{\leftmargin}{5em}%
+		\setlength{\labelsep}{\biblabelsep}%
+		\addtolength{\leftmargin}{\labelsep}%
+		\addtolength{\leftmargin}{\leftskip}%<----- here
+		\setlength{\itemsep}{\bibitemsep}%
+		\setlength{\parsep}{\bibparsep}}%
+	\renewcommand*{\makelabel}[1]{\hss##1}}
+{\endlist}
+{\item}
+
+%----------------------------------------------------------------------------------
+%            personal data
+%----------------------------------------------------------------------------------
+\firstname{Anjali}
+\familyname{Suman}
+\title{B. Sc., M. Sc.}
+\address{Enschede, Netherlands} %{Netherlands}
+\phone{+31-615228929}
+\email{anjali.suman.stats@gmail.com}
+\homepage{github.com/AnjaliML}
+\quote{\textbf{Seeking Ph.D. positions in Machine Learning}}
+\usepackage{lastpage}
+\rfoot{\textit{\small{\color{gray}\thepage/\color{red}\pageref{LastPage}}}}
+
+\begin{document}
+	\hypersetup{
+		colorlinks,
+		linkcolor={red!50!black},
+		citecolor={blue!50!black},
+		urlcolor={blue}
+	}
+	%-----       resume       ---------------------------------------------------------
+	\makecvtitle
+	\cvitem{Updated On:}{\today}
+	\section{\textbf{Research Interests}}
+	\cvitem[-1em]{\textbf{Machine Learning}}{
+		\hspace{-25mm}\cvlistdoubleitem{Computer vision}{Survival analysis}
+		\hspace{-25mm}\cvlistdoubleitem{Physics aided machine learning}{Gradient descent algorithms}
+		\hspace{-25mm}\cvlistdoubleitem{Sampling techniques}{Time series}
+		\hspace{-25mm}\cvlistdoubleitem{Exploratory data analysis}{Data visualization}
+	}
+	
+%	\section{\textbf{Education}}
+%	\cventry{2018}{Master of Science in Statistics}{Hindu College, University of Delhi}{Delhi}{$59\%^{*}$}{$^{*}$percentile score of 80\%}
+%	\cventry{2016}{Bachelor of Science in Statistics with Honors}{Ramanujan College, University of Delhi}{Delhi}{75\%}{}
+%	\cventry{2013}{High School}{Krishna Niketan (CBSE)}{Patna, Bihar}{\textit{80\%}}{}
+%	\cventry{2011}{Secondary School}{Krishna Niketan (CBSE)}{Patna, Bihar}{\textit{$9.2^{*}$}}{$^{*}$on a scale of 10}
+	\section{\textbf{Education}}
+	\cventry{2018}{Master of Science in Statistics}{Hindu College, University of Delhi}{Delhi}{}{}
+	\cventry{2016}{Bachelor of Science in Statistics with Honors}{Ramanujan College, University of Delhi}{Delhi}{}{}
+	\cventry{2013}{High School}{Krishna Niketan (CBSE)}{Patna, Bihar}{}{}
+	\cventry{2011}{Secondary School}{Krishna Niketan (CBSE)}{Patna, Bihar}{}{}	
+	
+	\section{\textbf{Technical Skills}}
+	\subsection{Python}
+	\cvitem{}{PyTorch, Jupyter}
+	\subsection{Computational Statistical Packages}
+	\cvitem{}{R, SPSS, SAS (Basic knowledge)}
+	\subsection{Computer Languages}
+	\cvitem{}{C++, C}
+	\subsection{Others}
+	\cvitem{}{MATLAB, Octave, Ubuntu, \LaTeX}
+	
+	\section{\textbf{Work Experience}}
+	\cvitem{June, 2022 -}{Oklahoma State University}
+	\cvitem{Present}{Predicting machine failure using survival analysis and machine learning}
+	\cvitem{\textbf{Mentor}}{Prof. Akash Deep}
+	\cvitem{2019-20}{Sureland Industrial Fire Safety Limited}
+	\cvitem{2017}{Cricnwin, Cheruniq Technology Pvt Ltd}
+
+%	\pagebreak
+	
+\section{\textbf{Project Involvements}}
+\subsection{Survival analysis \& machine learning}
+\cvitem{\textbf{Mentor}}{Prof. Akash Deep}
+\cvitem{2022}{
+	\begin{itemize}
+		\item This project aims to combine machine learning with survival analysis (bio-statistics) to predict the failure of machines in an industry. 
+		\item We draw analogy between machine failure and survival analysis concepts. 
+		\item We aim to implement a multi-event failure model to predict the survivability of machines in an industrial setting.
+	\end{itemize}
+}
+
+\subsection{Inter-state migration pattern in India}
+\cvitem{\textbf{GitHub:}}{\href{https://github.com/AnjaliML/InterStateMigrationIndia.git}{https://github.com/AnjaliML/InterStateMigrationIndia.git}}
+\cvitem{2022}{
+	\begin{itemize}
+		\item We bring out a comparative picture of people migrating to neighboring states and the rest of the country.
+		\item We find a list of the top 10 employing states.
+		\item We bring out a clear picture of the gender ratio of workers migrating to a given state from states all over India.
+	\end{itemize}
+}
+
+	\subsection{Sureland industrial fire safety limited}
+	\cvitem{2019-20}{Design \& Analysis Department
+		\begin{itemize}
+%					\item Market analysis and improvement of product design and distribution.
+%					\item The company specialized in fire safety. I was involved with the group that oversaw the design and distribution of smoke detectors. I used big data techniques to analyse fire accident statistics and the effectiveness of smoke detectors. An important aspect was also to judge and recommend the location of smoke detectors.
+	\item The company specialized in fire safety. I used machine learning to analyse fire accident statistics and the effectiveness of smoke detectors. An important aspect was also to judge and recommend the location of smoke detectors.
+			\end{itemize}
+		}
+	
+	\subsection{Fantasy league score calculator}
+	\cvitem{\textbf{GitHub:}}{\href{https://github.com/AnjaliML/FantasyCricket.git}{https://github.com/AnjaliML/FantasyCricket.git}}
+	\cvitem{2017}{
+		\begin{itemize}
+					\item Determination of factors that affect the cricket's performance in a given match through confimatory factor analysis. 
+					\item Determination of the weights of the contributions made by these factors on the value added by the player to his/her team.
+					\item Prediction of the credit score of the individual players based on past records and the factors obtained through confirmatory factor analysis
+			\end{itemize}
+		}
+	
+		\subsection{Quality Assessment of Academic Website Using Sampling Techniques}
+		\cvitem{\textbf{GitHub:}}{\href{https://github.com/AnjaliML/AcademicWebsiteSampling.git}{https://github.com/AnjaliML/AcademicWebsiteSampling.git}}
+		\cvitem{\textbf{Mentor}}{Dr. Garima Priyadarshini}
+		\cvitem{2016}{\begin{itemize}
+						\item A Variety of studies has been conducted on websites.
+						\item These studies are broadly based on heuristic analysis, surveys through questionnaires, interviews or web analysis tools (like Google analytics).
+						\item We made a hypothesis according to questionnaire and analyze them through responses using some sampling techniques
+				\end{itemize}}
+		
+			
+			
+%				\cvitem{2014}{Matchstick game}
+%				\cvitem{}{\begin{itemize}
+%								\item A game between a computer and an user such that the computer is always a winner.
+%								\item Rules of game: (a) There are 21 matchsticks, (b) Player and computer can choose matchsticks alternatively, (c) At a chance they can pick less than 5 and greater than 0 matchsticks and (d) Whoever is forced to pick up the last matchstick loses the game.
+%						\end{itemize}}
+					
+				
+				\section{\textbf{Professional Development}}
+				\cvitem{2015}{Indian Society of Agricultural Science: 68$^{th}$ Annual Conference.}
+				\cvitem{2014}{IBM SPSS (Statistical Package for the Social Sciences) workshop.}
+				\cvitem{2014}{INCOMECT (International Conference on Management Education \& Corporate Transformation)}
+				\cvitem{2014}{Workshop on R-Language.}
+				\cvitem{2014}{WinQSB for Operation Research workshop.}
+				\cvitem{2013}{International DU conference.}
+
+				\section{\textbf{Languages}}
+				\cvitemwithcomment{English}{Fluent}{Daily practice, all work performed in English}
+				\cvitemwithcomment{Hindi}{Native}{Mother Tongue}
+									%
+				\section{\textbf{Extra-Curricular}}
+				\cvitem{2016}{Conference organizer team: Recent Statistical Computing Techniques and their applications}
+											
+				\section{\textbf{References}}
+				\begin{tabular}{lr}
+					% Referee 1
+					\begin{minipage}[t]{3in}
+						Prof. Akash Deep\\
+						Assistant Professor\\
+						Oklahoma State University\\
+						\href{mailto:akash.deep@okstate.edu}{akash.deep@okstate.edu}
+					\end{minipage}
+					&
+					% Referee 2
+					\begin{minipage}[t]{3in}
+						Prof. Vijay Kumar Pandey\\
+						Assistant Professor\\
+						Bareilly College\\
+						\href{mailto:vijay.pandey550@gmail.com}{vijay.pandey550@gmail.com}
+					\end{minipage}
+				\end{tabular}
+\end{document}
